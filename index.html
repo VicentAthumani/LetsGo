@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsGO Ride</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>LetsGO</h1>
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <nav id="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <section class="booking">
+        <h2>Book Your Ride</h2>
+        <form id="ride-form">
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" required>
+
+            <label for="ride-type">Select Ride Type:</label>
+            <select id="ride-type">
+                <option value="standard">Standard</option>
+                <option value="luxury">Luxury</option>
+                <option value="shared">Shared</option>
+            </select>
+
+            <button type="submit">Find Ride</button>
+        </form>
+    </section>
+
+    <section class="map-section">
+        <h2>Live Driver Tracking</h2>
+        <div id="map"></div>
+    </section>
+
+    <section class="ride-details">
+        <h2>Available Rides</h2>
+        <div id="ride-list"></div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 LetsGO - Ride-sharing made easy</p>
+    </footer>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
